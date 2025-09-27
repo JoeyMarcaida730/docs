@@ -1,0 +1,18 @@
+[User Prompt]
+     ↓
+[Prompt Interpreter] ← Language Agent
+     ↓
+[Agent Router] ← Chief Orchestrator
+     ↓
+ ┌────────────┬─────────────┐
+ │ UI Composer │ Backend Builder │
+ │ ← UI Agent  │ ← Coding Agent  │
+ └────────────┴─────────────┘
+     ↓
+[Messaging Layer] ← Messaging Agent
+     ↓
+[Recognition Engine] ← Testing Agent
+     ↓
+[Deployment Orchestrator] ← Deployment Agent
+     ↓
+[GitHub / Civic Cloud]
