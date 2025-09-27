@@ -1,0 +1,62 @@
+{
+  "agents": {
+    "Chief_Orchestrator": {
+      "role": "Orchestration Manager",
+      "executes": ["Agent_Router", "Deployment_Orchestrator"]
+    },
+    "Language_Agent": {
+      "role": "Prompt Interpreter & Output Formatter",
+      "executes": ["Prompt_Interpreter"]
+    },
+    "UI_Agent": {
+      "role": "Layout Composer",
+      "executes": ["UI_Composer"]
+    },
+    "Coding_Agent": {
+      "role": "Backend Builder",
+      "executes": ["Backend_Builder"]
+    },
+    "Testing_Agent": {
+      "role": "Validator",
+      "executes": ["Recognition_Engine"]
+    },
+    "Deployment_Agent": {
+      "role": "Exporter",
+      "executes": ["Deployment_Orchestrator"]
+    },
+    "Messaging_Agent": {
+      "role": "Notifier",
+      "executes": ["Messaging_Layer"]
+    }
+  },
+  "modules": {
+    "Prompt_Interpreter": {
+      "triggered_by": "User_Prompt",
+      "handled_by": "Language_Agent"
+    },
+    "Agent_Router": {
+      "triggered_by": "Interpreter_Output",
+      "handled_by": "Chief_Orchestrator"
+    },
+    "UI_Composer": {
+      "triggered_by": "Router_Sequence",
+      "handled_by": "UI_Agent"
+    },
+    "Backend_Builder": {
+      "triggered_by": "Router_Sequence",
+      "handled_by": "Coding_Agent"
+    },
+    "Messaging_Layer": {
+      "triggered_by": "Agent_Completion",
+      "handled_by": "Messaging_Agent"
+    },
+    "Recognition_Engine": {
+      "triggered_by": "Build_Completion",
+      "handled_by": "Testing_Agent"
+    },
+    "Deployment_Orchestrator": {
+      "triggered_by": "Final_Payload",
+      "handled_by": "Deployment_Agent"
+    }
+  }
+}
