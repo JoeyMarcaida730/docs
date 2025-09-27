@@ -1,0 +1,36 @@
+
+---
+
+## Supabase Project
+
+1. Go to [Supabase.com](https://supabase.com) and sign in.
+2. Click **New Project**.
+3. Use these settings:
+   - Name: `base44_clone_sovereign`
+   - Region: Southeast Asia
+   - Database: PostgreSQL
+
+### Initial Setup
+- Create tables: `users`, `logs`
+- Enable storage buckets: `uploads`, `documents`
+- Enable auth: connect Clerk/Auth.js
+- Enable Realtime: for messaging layer
+
+---
+
+## Services to Connect
+
+| Service | Purpose | Notes |
+|--------|---------|-------|
+| Clerk/Auth.js | User authentication | Free tier available |
+| Resend/Postmark | Email notifications | ~$10/month |
+| Stripe | Payment processing | No monthly fee |
+| GitHub | Code hosting | Free |
+| Civic Cloud | Sovereign deployment | CLI integration |
+
+---
+
+## Next Steps
+- Scaffold orchestration modules
+- Simulate full build flow
+- Deploy first test app
